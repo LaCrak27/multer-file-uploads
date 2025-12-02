@@ -22,7 +22,7 @@ app.get("/health", (_, res) => {
     res.sendStatus(200);
 });
 
-app.post("/upload", (req, res) => {
+app.put("/upload", (req, res) => {
     upload(req, res, function (err) {
         if (err instanceof multer.MulterError) {
             console.error(err);
