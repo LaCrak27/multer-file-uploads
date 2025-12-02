@@ -107,7 +107,7 @@ const storage = multer.diskStorage({
     }
 });
 
-const upload = multer({ storage: storage }).array();
+const upload = multer({ storage: storage }).any();
 
 function getSaveDirectory() {
     const railwayVolumeMountPath = process.env.RAILWAY_VOLUME_MOUNT_PATH;
